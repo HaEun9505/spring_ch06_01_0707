@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student2" class="com.haeun.test.Student">
+		<constructor-arg  value="김유신"/>
+		<constructor-arg  value="25"/>
+		<constructor-arg>
+			<list>
+				<value>운동</value>
+				<value>독서</value>
+			</list>
+		</constructor-arg>
+		<property name="weight" value="80"></property><!-- 생성자 없기 때문에 constructor-arg X -->
+		<property name="height" value="180"></property>
+	</bean>
+	
+	<!-- c: Constructor(생성자), p: property(속성) -->
+	<bean id="family" class="com.haeun.test.Family" c:papaName="홍아빠" c:mamiName="홍엄마" p:sisterName="홍자매">
+		<property name="brotherName">
+			<value>홍형제</value>
+		</property>
+	</bean>
+	
+</beans>

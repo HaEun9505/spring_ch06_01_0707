@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="student1" class="com.haeun.test.Student">
+		<constructor-arg>
+			<value>홍길동</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>18</value>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>스포츠</value>
+				<value>자전거</value>
+				<value>영화감상</value>
+			</list>
+		</constructor-arg>
+		
+		<property name="weight"><!-- 생성자 없기 때문에 constructor-arg X -->
+			<value>80</value>
+		</property>
+		<property name="height">
+			<value>180</value>
+		</property>
+	</bean>
+	
+	<bean id="studentInfo1" class="com.haeun.test.StudentInfo">
+		<property name="student">
+			<ref bean="student1" />
+		</property>	
+	
+	</bean>
+	
+</beans>
