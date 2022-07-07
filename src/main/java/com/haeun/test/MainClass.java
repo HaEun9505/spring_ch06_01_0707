@@ -25,6 +25,7 @@ public class MainClass {
 	 	System.out.println(student2.getName());
 	 	System.out.println(student2.getHobbys());
 	 	
+	 	//applicationCTX2.xml에서 설정한 값 가져오기
 	 	Family family = ctx.getBean("family", Family.class);
 	 	System.out.println(family.getPapaName());
 	 	System.out.println(family.getMamiName());
