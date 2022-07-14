@@ -7,23 +7,23 @@ public class MainClass {
 	public static void main(String[] args) {
 		String config1 = "classpath:applicationCTX.xml";
 		String config2 = "classpath:applicationCTX2.xml";
-		//Container ÆÄÀÏ ºÒ·¯¿À±â
+		//Container íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext(config1,config2);
 		
-		//applicationCTX.xml¿¡¼­ ¼³Á¤ÇÑ °ª °¡Á®¿À±â(bean Á¶È¸)
-	 	Student student1 = ctx.getBean("student1", Student.class);	//bean Á¶È¸(°´Ã¼ ¾ò¾î¿À±â)
+		//applicationCTX.xmlì—ì„œ ì„¤ì •í•œ ê°’ ê°€ì ¸ì˜¤ê¸°(bean ì¡°íšŒ)
+	 	Student student1 = ctx.getBean("student1", Student.class);	//bean ì¡°íšŒ(ê°ì²´ ì–»ì–´ì˜¤ê¸°)
 		
 	 	StudentInfo studentInfo = ctx.getBean("studentInfo1", StudentInfo.class);
 		
 	 	System.out.println(student1.getName());
 	 	System.out.println(student1.getHobbys());
 	 	
-	 	Student stu1 = studentInfo.getStudent();	//StudentInfoÅ¬·¡½ºÀÇ getStudent È£Ãâ(½ÇÇà)
+	 	Student stu1 = studentInfo.getStudent();	//StudentInfoí´ë˜ìŠ¤ì˜ getStudent í˜¸ì¶œ(ì‹¤í–‰)
 	 	System.out.println(stu1.getName());
 	 	System.out.println(stu1.getHobbys());
 	 	
 	 	
-	 	//applicationCTX2.xml¿¡¼­ ¼³Á¤ÇÑ °ª °¡Á®¿À±â(bean Á¶È¸)
+	 	//applicationCTX2.xmlì—ì„œ ì„¤ì •í•œ ê°’ ê°€ì ¸ì˜¤ê¸°(bean ì¡°íšŒ)
 	 	Student student2 = ctx.getBean("student2",Student.class);
 	 	System.out.println(student2.getName());
 	 	System.out.println(student2.getHobbys());

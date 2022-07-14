@@ -6,7 +6,7 @@ public class Family {
 	private String sisterName;
 	private String brotherName;
 	
-	//»ı¼ºÀÚ·Î ÃÊ±âÈ­
+	//ìƒì„±ì
 	public Family(String papaName, String mamiName) {
 		super();
 		this.papaName = papaName;

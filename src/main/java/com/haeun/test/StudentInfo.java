@@ -5,7 +5,7 @@ public class StudentInfo {
 	private Student student;
 	
 	
-	public StudentInfo() {	//ºó »ı¼ºÀÚ
+	public StudentInfo() {	//ìƒì„±ì
 		super();
 	}
 
